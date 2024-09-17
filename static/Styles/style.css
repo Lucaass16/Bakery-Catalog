@@ -10,13 +10,15 @@
 
 :root{
     --brown: #5d3d17;
+    --light-brown: #c8570673;
+    --beige: #71100724;
+    --green: #43ff64d9;
 }
 
 html,
 body{
     width: 100%;
     overflow-x: hidden;
-    background-color: aliceblue;
 }
 
 .content{
@@ -29,7 +31,7 @@ body{
 }
 
 header{
-    background-image: url("../../sources/images/header-img.png");
+    background-image: url("../../sources/images/assets/header-img.png");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -45,7 +47,6 @@ nav{
 .header-background{
     width: 200px;
     height: 200px;
-    margin-bottom: 50px;
 }
 
 .header-slogan{
@@ -78,4 +79,189 @@ nav ul li a:hover{
 .brand{
     font-size: 34px;
     color: var(--brown);
+}
+
+.header-block{
+    background-image: url("../../sources/images/header-img.jfif");
+    max-width: 1000px;
+    min-width: 300px;
+    height: 450px;
+    background: #dedede9a;
+    border-radius: 8px;
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.header-block img{
+    max-width: 1000px;
+    min-width: 300px;
+}
+
+.header-block .text{
+    position: absolute;
+    right: 15%;
+    top: 15%;
+}
+
+section .catalog{
+    width: 100%;
+    margin-top: 100px;
+    padding: 100px;
+}
+
+.title-catalog{
+    margin-top: 600px;
+    padding-bottom: 20px;
+}
+
+.title-catalog p{
+    text-align: right;
+}
+
+.title-catalog h3{
+    text-align: right;
+}
+
+.catalog-card-block{
+    max-width: 1000px;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-gap: 40px;
+    padding: 50px;
+    background-color: #71100724;
+    border-radius: 8px;
+}
+
+section .card-item{
+    height: 470px;
+    max-width: 400px;
+    min-width: 300px;
+    background-color: var(--light-brown);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* flex: 1 1 30%; */
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+section .card-item:hover{
+    box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
+    -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
+    -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
+    transform: scale(1.05);
+}
+
+.card-content{
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-content h3{
+    text-align: left;
+    width: 90%;
+}
+
+
+.card-content p{
+    width: 90%;
+    font-style: italic;
+    font-size: 16px;
+    color: #00000070;
+}
+
+.card-item .card-img{
+    height: 200px;
+    width: 85%;
+    border-radius: 8px;
+}
+
+.card-item .actions{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cart-btn{
+    background-color: var(--green);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 70%;
+    height: 50px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.cart-btn:hover{
+    background-color: #31c84d;
+    transition: 0.2s;
+}
+
+.bookmark-btn{
+    background-color: #fffa01a3;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1em;
+    width: 20%;
+    height: 50px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.bookmark-btn:hover{
+    background-color: #fffa01;
+    transition: 0.3s;
+}
+
+.about-content{
+    background-color: var(--beige);
+    padding: 30px 10px 10px 10px;
+    border-radius: 8px;
+}
+
+.about-content h4{
+    text-align: left;
+    font-size: large;
+    margin-bottom: 15px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer h3{
+    font-size: large;
+}
+
+footer p{
+    font-size: medium;
+}
+
+footer .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact img{
+    height: 24px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
