@@ -35,12 +35,15 @@ header{
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 250px;
+    height: 450px;
 }
 
 nav{
+    width: 100%;
+    height: 125px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -58,6 +61,23 @@ nav ul{
     margin-top: 50px;
     display: flex;
     flex-direction: row;
+}
+
+nav ul button{
+    border: 1px solid var(--brown);
+    background: transparent;
+    padding: 8px 40px;
+    cursor: pointer;
+    margin-left: 30px;
+    color: var(--brown);
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+nav ul button:hover{
+    background-color: var(--brown);
+    color: white;
+    transition: 0.3s;
 }
 
 nav ul li{
@@ -82,6 +102,7 @@ nav ul li a:hover{
 }
 
 .header-block{
+    margin-top: 50px;
     background-image: url("../../sources/images/header-img.jfif");
     max-width: 1000px;
     min-width: 300px;
@@ -91,7 +112,6 @@ nav ul li a:hover{
     box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
     -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
     -moz-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 50%);
-    padding: 10px;
     position: relative;
     z-index: 10;
 }
@@ -99,6 +119,7 @@ nav ul li a:hover{
 .header-block img{
     max-width: 1000px;
     min-width: 300px;
+    border-radius: 8px;
 }
 
 .header-block .text{
@@ -109,21 +130,13 @@ nav ul li a:hover{
 
 section .catalog{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 40px;
     padding: 100px;
 }
 
 .title-catalog{
-    margin-top: 600px;
+    margin-top: 500px;
     padding-bottom: 20px;
-}
-
-.title-catalog p{
-    text-align: right;
-}
-
-.title-catalog h3{
-    text-align: right;
 }
 
 .catalog-card-block{
@@ -226,42 +239,155 @@ section .card-item:hover{
     transition: 0.3s;
 }
 
+.about{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px;
+}
+
 .about-content{
-    background-color: var(--beige);
-    padding: 30px 10px 10px 10px;
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: #dedede3b;
+    margin: 0 auto;
     border-radius: 8px;
-}
-
-.about-content h4{
-    text-align: left;
-    font-size: large;
-    margin-bottom: 15px;
-}
-
-footer{
+    z-index: 10;
+    padding: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
-footer h3{
-    font-size: large;
+.left{
+    width: 35%;
+    min-width: 300px;
+    height: 100%;
+    background-color: var(--beige);
+    border-radius: 8px;
 }
 
-footer p{
+.right{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+
+.right h4{
+    text-align: right;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.right p{
+    max-width: 90%;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-align: right;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.about-content p{
+    text-align: right;
     font-size: medium;
 }
 
-footer .contact{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.title-wrapper-features{
+    padding: 20px 0px;
 }
 
-.contact img{
-    height: 24px;
-    margin-top: 5px;
-    margin-right: 5px;
+.features-card-block{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 600px;
+    background: white;
+    margin: 0 auto;
+    border-radius: 8px;
+    z-index: 10;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    grid-gap: 30px;
+}
+
+.features-card-item{
+    max-width: 420px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #dedede3b;
+    background: var(--light-brown);
+    border-radius: 8px;
+}
+
+.features-text-content{
+    max-width: 60%;
+    margin: 5px;
+}
+
+.features-card-item img{
+    width: 64px;
+    height: 64px;
+}
+
+footer {
+    width: 100%;
+    height: 250px;
+}
+
+footer .main {
+    width: 100%;
+    height: 200px;
+    background: var(--brown);
+    padding: 20px 10px;
+}
+
+.footer-links {
+    max-width: 1000px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-company,
+.footer-rental,
+.footer-contact,
+.footer-social {
+    color: white;
+    height: 100%;
+    min-height: 100px;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin-bottom: 8px;
+}
+
+.main .footer-social img {
+    width: 32px;
+    height: 32px;
+}
+
+footer .last {
+    width: 100%;
+    height: 50px;
+    background: var(--light-brown);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
