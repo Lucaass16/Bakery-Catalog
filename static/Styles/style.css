@@ -139,6 +139,29 @@ section .catalog{
     padding-bottom: 20px;
 }
 
+#add-btn{
+    background-color: var(--green);
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    width: 20%;
+    height: 50px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#add-btn:hover{
+    background-color: #31c84d;
+    transition: 0.2s;
+}
+
 .catalog-card-block{
     max-width: 1000px;
     height: 100%;
@@ -151,7 +174,7 @@ section .catalog{
 }
 
 section .card-item{
-    height: 470px;
+    height: 500px;
     max-width: 400px;
     min-width: 300px;
     background-color: var(--light-brown);
@@ -203,6 +226,8 @@ section .card-item:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .cart-btn{
@@ -236,6 +261,40 @@ section .card-item:hover{
 
 .bookmark-btn:hover{
     background-color: #fffa01;
+    transition: 0.3s;
+}
+
+.edit-btn{
+    background-color: #1111f499;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 45%;
+    height: 50px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.edit-btn:hover{
+    background-color: #0000ffe8;
+    transition: 0.3s;
+}
+
+.delete-btn{
+    background-color: #ff0000da;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 45%;
+    height: 50px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.delete-btn:hover{
+    background-color: #a20000;
     transition: 0.3s;
 }
 
@@ -392,6 +451,66 @@ footer .last {
     justify-content: center;
 }
 
+.active{
+    display: flex;
+}
+
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: var(--beige);
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    width: 50%;
+}
+
+
+.modal input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid;
+    border-left: none;
+    border-right: none;
+    padding: 8px;
+    margin-bottom: 25px;
+    background-color: var(--beige);
+    font-size: 1em;
+}
+
+.modal label{
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.modal button{
+    border: none;
+    border-radius: 14px;
+    background-color: var(--brown);
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+.active{
+    display: flex;
+}
+
 @media (max-width: 576px){
     nav ul li{
         display: none;
@@ -425,5 +544,13 @@ footer .last {
     .features-card-block{
         display: flex;
         flex-direction: column;
+    }
+
+    #add-btn{
+        width: 45%;
+    }
+
+    .modal button{
+        width: 90%;
     }
 }

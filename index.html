@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/Styles/style.css">
-    <title>Document</title>
+    <title>Padaria Santa Massa</title>
 </head>
 <body>
     <header>
@@ -35,8 +35,12 @@
             <div class="title-catalog">
                 <p>Conheça o que temos de melhor</p>
                 <h3>Catálogo</h3>
+                <button id="add-btn" onclick="openModal()">
+                    Adicionar item <img src="sources/icons/add.svg" alt="">
+                </button>
             </div>
             <div class="catalog-card-block">
+                
                 <div class="card-item">
                     <img src="sources/images/products/sonhos.jpg" alt="" class="card-img">
                     <div class="card-content">
@@ -48,6 +52,12 @@
                             </button>
                             <button class="bookmark-btn">
                                 <img src="sources/icons/bookmark.svg" alt="">
+                            </button>
+                            <button class="edit-btn">
+                                <img src="sources/icons/edit.svg" alt="">
+                            </button>
+                            <button class="delete-btn">
+                                <img src="sources/icons/delete.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -64,6 +74,12 @@
                             <button class="bookmark-btn">
                                 <img src="sources/icons/bookmark.svg" alt="">
                             </button>
+                            <button class="edit-btn">
+                                <img src="sources/icons/edit.svg" alt="">
+                            </button>
+                            <button class="delete-btn">
+                                <img src="sources/icons/delete.svg" alt="">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -78,6 +94,12 @@
                             </button>
                             <button class="bookmark-btn">
                                 <img src="sources/icons/bookmark.svg" alt="">
+                            </button>
+                            <button class="edit-btn">
+                                <img src="sources/icons/edit.svg" alt="">
+                            </button>
+                            <button class="delete-btn">
+                                <img src="sources/icons/delete.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -94,6 +116,12 @@
                             <button class="bookmark-btn">
                                 <img src="sources/icons/bookmark.svg" alt="">
                             </button>
+                            <button class="edit-btn">
+                                <img src="sources/icons/edit.svg" alt="">
+                            </button>
+                            <button class="delete-btn">
+                                <img src="sources/icons/delete.svg" alt="">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -109,6 +137,12 @@
                             <button class="bookmark-btn">
                                 <img src="sources/icons/bookmark.svg" alt="">
                             </button>
+                            <button class="edit-btn">
+                                <img src="sources/icons/edit.svg" alt="">
+                            </button>
+                            <button class="delete-btn">
+                                <img src="sources/icons/delete.svg" alt="">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -123,6 +157,12 @@
                             </button>
                             <button class="bookmark-btn">
                                 <img src="sources/icons/bookmark.svg" alt="">
+                            </button>
+                            <button class="edit-btn">
+                                <img src="sources/icons/edit.svg" alt="">
+                            </button>
+                            <button class="delete-btn">
+                                <img src="sources/icons/delete.svg" alt="">
                             </button>
                         </div>
                     </div>
@@ -204,5 +244,24 @@
         </div>
         <div class="last">O melhor lugar, pertinho de você!</div>
     </footer>
+
+    <div class="modal-container">
+        <div class="modal">
+            <form action="">
+                <label for="m-name">Nome: </label>
+                <input type="text" id="m-name" required>
+                <label for="m-desc">Descrição:</label>
+                <input type="text" id="m-desc" required>
+                <label for="m-price">Preço:</label>
+                <input type="text" id="m-price" required>
+                <label for="m-img">Caminho para a imagem: </label>
+                <input type="text" id="m-img">
+
+                <button id="saveChanges">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="static/scripts/script.js"></script>
 </body>
 </html>
